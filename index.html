@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>WOLFIE | AC 2025</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --badge-width: 420px;
+      --badge-height: 600px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+    }
+
+    .badge {
+      width: var(--badge-width);
+      height: var(--badge-height);
+      background: url('badge-background.png') no-repeat center/cover;
+      border-radius: 1rem;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+    }
+
+    .top-box {
+    width: 360px;
+    height: 128px;
+    background: url('ABOUTBKG.png') no-repeat center/cover;
+    margin-top: 30px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .links a img {
+      width: 300px;
+      height: 50px;
+      object-fit: contain;
+      transition: transform 0.2s ease;
+    }
+
+    .links a img:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 400px) {
+      :root {
+        --badge-width: 90vw;
+        --badge-height: calc(90vw * 1.43);
+      }
+
+      .top-box {
+        width: 90%;
+        height: 80px;
+      }
+
+      .links a img {
+        width: 90%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="badge">
+    <div class="content">
+      <div class="top-box"></div>
+
+      <div class="links">
+        <a href="https://t.me/eisawesome" target="_blank">
+          <img src="TELEGRAM.png" alt="TELEGRAM @EISAWESOME">
+        </a>
+        <a href="https://vrchat.com/home/user/usr_cb3a5879-e2c1-4986-99b6-fb94a4ce8584" target="_blank">
+          <img src="VRCHAT.png" alt="VRChat">
+        </a>
+        <a href="https://steamcommunity.com/profiles/76561198026562237" target="_blank">
+          <img src="STEAM.png" alt="Steam">
+        </a>
+        <a href="badge-page.html">
+          <img src="BADGE.png" alt="View Full AC Badge">
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
