@@ -3,8 +3,11 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>WOLFIE | AC 2025 BADGE</title>
+  <title>Wolfe | AC 2025 BADGE</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Import Fredoka font -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --badge-width: 420px;
@@ -23,7 +26,7 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Fredoka', sans-serif;
       color: white;
     }
 
@@ -33,6 +36,16 @@
       gap: 1.5rem;
       flex-wrap: wrap;
       justify-content: center;
+    }
+
+    .back-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      gap: 0.5rem;
+      font-size: 1rem;
+      font-weight: 600;
     }
 
     .back-button {
@@ -45,12 +58,18 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      text-decoration: none;
       transition: background 0.2s ease;
+      flex-shrink: 0;
     }
 
     .back-button:hover {
       background-color: #666;
+    }
+
+    .back-text {
+      color: #ccc;
+      font-weight: 600;
+      font-family: 'Fredoka', sans-serif;
     }
 
     /* Flip card styles */
@@ -89,7 +108,7 @@
     }
 
     .back {
-      background-image: url('NFCB.png'); /* Your back image */
+      background-image: url('NFCB.png');
       transform: rotateY(180deg);
     }
 
@@ -104,13 +123,20 @@
         height: 40px;
         font-size: 1.2rem;
       }
+
+      .back-text {
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
 
 <body>
   <div class="container">
-    <a href="index.html" class="back-button">&#8592;</a>
+    <a href="index.html" class="back-link">
+      <div class="back-button">&#8592;</div>
+      <span class="back-text">About Me</span>
+    </a>
     <div class="flip-container" id="flip-card">
       <div class="flipper">
         <div class="badge front"></div>
@@ -120,13 +146,11 @@
   </div>
 
   <script>
-    // Add click event listener for flip
     const flipCard = document.getElementById('flip-card');
     flipCard.addEventListener('click', () => {
       flipCard.classList.toggle('flipped');
     });
 
-    // Optional: also toggle on Enter/Space for accessibility
     flipCard.setAttribute('tabindex', '0');
     flipCard.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
